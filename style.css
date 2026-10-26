@@ -1,6 +1,18 @@
-
+/* 
+   BOX SIZING (content-box vs border-box)
+   The universal selector below sets border-box. 
+   The .content-box-example demonstrates content-box.
+*/
 * {
     box-sizing: border-box;
+}
+
+.content-box-example {
+    box-sizing: content-box;
+    width: 300px;
+    padding: 20px;
+    border: 5px solid darkslategray;
+    /* Total width will be 300 + 40 (padding) + 10 (border) = 350px */
 }
 
 html {
@@ -14,6 +26,8 @@ body {
     line-height: 1.6;
     color: darkslategray;
     background-color: white;
+    /* Using vh unit from previous requirements just in case */
+    min-height: 100vh; 
 }
 
 .profile-header {
@@ -22,6 +36,11 @@ body {
     text-align: center;
     color: white;
     background-color: rgb(70, 70, 161);
+}
+
+/* VISIBILITY (hidden vs display none) */
+.hidden-message {
+    visibility: hidden; 
 }
 
 .profile-header::after {
@@ -57,6 +76,8 @@ body {
     width: 90%;
     max-width: 900px;
     margin: 20px auto;
+    /* OVERFLOW (hidden, auto) */
+    overflow: auto;
 }
 
 .about-section,
@@ -64,11 +85,39 @@ body {
     padding: 20px;
     margin-bottom: 20px;
     background-color: whitesmoke;
+    border: 1px solid #ccc;
 }
 
+/* 
+   POSITIONING (relative, absolute, fixed, static)
+   The about-section is relative. 
+*/
 .about-section {
     position: relative;
     overflow: hidden;
+}
+
+/* ABSOLUTE POSITIONING & INSET */
+.about-section::before {
+    content: "Absolute";
+    position: absolute;
+    inset: 10px auto auto 10px; /* top right bottom left */
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+}
+
+/* FIXED POSITIONING */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: darkslategray;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
 .profile-image {
@@ -76,12 +125,15 @@ body {
     height: 100px;
     object-fit: cover;
     border-radius: 50%;
+    /* Negative margin example */
+    margin-left: -10px;
 }
 
 h2 {
     color: #245675;
 }
 
+/* FLOATS (left/right) & CLEAR */
 #skills {
     float: left;
     width: 48%;
@@ -89,11 +141,12 @@ h2 {
 }
 
 #education {
-    float: left;
+    float: right;
     width: 48%;
 }
 
-#links {
+/* CLEAR (clears the floats above) */
+#links, #contact-form, #table-section {
     clear: both;
 }
 
@@ -101,10 +154,51 @@ h2 {
     margin-bottom: 5px;
 }
 
-.content-section li::marker {
+/* PSEUDO-ELEMENTS (::first-letter, ::selection) */
+.content-section p::first-letter {
+    font-size: 1.5em;
     color: darkslategray;
+    font-weight: bold;
 }
 
+::selection {
+    background-color: darkslategray;
+    color: white;
+}
+
+/* DISPLAY TABLE AND TABLE-CELL */
+.table-layout {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-row {
+    display: table-row;
+}
+
+.table-cell {
+    display: table-cell;
+    padding: 10px;
+    border: 1px solid #aaa;
+}
+
+/* DISPLAY NONE */
+.mobile-only {
+    display: none; 
+}
+
+/* TEXT OVERFLOW, WORD BREAK, OVERFLOW WRAP */
+.long-text-example {
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
+
+/* FORM STYLING */
 .form-group {
     margin-bottom: 15px;
 }
@@ -121,6 +215,7 @@ textarea {
     border: 1px solid #aaa;
 }
 
+/* PSEUDO-CLASSES (:focus, :valid, :invalid) */
 input:focus,
 textarea:focus {
     outline: 2px solid darkslategray;
@@ -147,17 +242,18 @@ fieldset {
     margin-bottom: 15px;
 }
 
+/* FIXED BUTTON HOVER */
 button {
     padding: 8px 15px;
     margin-right: 5px;
     color: white;
-    background-color: darkslategray;
+    background-color: rgb(70, 70, 161);
     border: none;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: darkslategray;
+    background-color: darkslategray; /* Now it actually changes color */
 }
 
 button:disabled {
@@ -177,6 +273,7 @@ a:focus-visible {
     background-color: darkslategray;
 }
 
+/* MEDIA QUERIES (Responsive breakpoints) */
 @media (max-width: 600px) {
     .container {
         width: 95%;
