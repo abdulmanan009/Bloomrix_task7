@@ -1,0 +1,18 @@
+Build the following practical page using HTML and CSS. Reuse the CSS concepts learned on earlier days. The assignment should be functional and visually organized, not just a collection of isolated examples.
+• Use the Day 1 registration form and table as the HTML base.
+• Create a centered registration container with a defined max-width and appropriate margins.
+• Apply border-box globally using box-sizing and explain why it is useful.
+• Use padding, margin, border, border-radius, and box-shadow to create clear sections.
+• Create a header that uses relative positioning and at least one decorative pseudo-element.
+• Use an absolutely positioned badge or status label inside a relatively positioned card.
+• Create a sticky or fixed top navigation/header and make sure it does not hide important content.
+• Demonstrate z-index by layering at least two elements.
+• Use overflow handling on a long notes area or table wrapper.
+• Create a two-column section using traditional float or inline-block layout. Do not use Flexbox or Grid for this specific section.
+• Use clear to correctly handle the traditional floated layout.
+• Style table headers, rows, alternating rows, borders, and spacing.
+• Style form states such as focus, disabled, checked, valid, invalid, and required.
+• Use :nth-child() to create alternating table-row or card styling.
+• Use ::before or ::after to add a visual marker without adding unnecessary HTML.
+• Include one small section demonstrating display:none vs visibility:hidden and document the difference in a comment.
+• Use DevTools to identify at least three box-model or positioning problems and fix them.

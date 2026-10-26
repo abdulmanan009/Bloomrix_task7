@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdul Manan - Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="profile-header">
+        <h1>Abdul Manan</h1>
+        <p>
+            I recently completed my BSCS. I have work experience
+            in different stacks like MERN, .NET, etc.
+        </p>
+    </header>
+
+    <nav class="navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#links">Useful Links</a>
+        <a href="#contact-form">Contact</a>
+    </nav>
+
+    <main class="container">
+
+        <section id="about" class="about-section">
+            <img
+                class="profile-image"
+                src="img.jpg"
+                alt="Profile image of Abdul Manan"
+                width="100"
+                height="100"
+            >
+
+            <h2>About Section</h2>
+            <p>
+                I work on different projects and I love to solve
+                real-world problems.
+            </p>
+        </section>
+
+        <section id="skills" class="content-section">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </section>
+
+        <section id="education" class="content-section">
+            <h2>Education</h2>
+            <ol>
+                <li>Matric</li>
+                <li>Intermediate</li>
+                <li>BS CS</li>
+            </ol>
+        </section>
+
+        <section id="links" class="content-section">
+            <h2>Useful Links</h2>
+            <ul>
+                <li>
+                    <a href="https://www.linkedin.com/in/abdulmanan093/"
+                       target="_blank" rel="noopener noreferrer">
+                        LinkedIn
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/abdulmanan093"
+                       target="_blank" rel="noopener noreferrer">
+                        GitHub
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Contact Form</h2>
+
+            <form id="contact-form" action="#" method="get">
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name"
+                           placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email"
+                           placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password"
+                           required>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date">
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">Years of Experience</label>
+                    <input type="number" id="experience" name="experience" min="0" max="50" step="1" value="0">
+                </div>
+
+                <fieldset class="form-group">
+                    <legend>Gender</legend>
+
+                    <label class="choice">
+                        <input type="radio" name="gender" value="male">Male
+                    </label>
+
+                    <label class="choice">
+                        <input type="radio" name="gender" value="female">Female
+                    </label>
+
+                    <label class="choice">
+                        <input type="radio" name="gender" value="other">Other
+                    </label>
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <legend>Interests</legend>
+
+                    <label class="choice">
+                        <input type="checkbox" name="interests" value="html">HTML
+                    </label>
+
+                    <label class="choice">
+                        <input type="checkbox" name="interests" value="css">CSS
+                    </label>
+
+                    <label class="choice">
+                        <input type="checkbox" name="interests" value="js"> JavaScript
+                    </label>
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Write your message" rows="4"></textarea>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Abdul Manan</p>
+    </footer>
+
+</body>
+</html>
