@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,12 +16,15 @@
             I recently completed my BSCS. I have work experience
             in different stacks like MERN, .NET, etc.
         </p>
+        <!-- visibility: hidden requirement -->
+        <p class="hidden-message">This text is hidden using visibility.</p>
     </header>
 
     <nav class="navigation">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#education">Education</a>
+        <a href="#table-section">Education Table</a>
         <a href="#links">Useful Links</a>
         <a href="#contact-form">Contact</a>
     </nav>
@@ -63,6 +65,21 @@
             </ol>
         </section>
 
+        <!-- New Section to demonstrate display: table and table-cell -->
+        <section id="table-section" class="content-section clear-floats">
+            <h2>Education Table</h2>
+            <div class="table-layout">
+                <div class="table-row">
+                    <div class="table-cell">Degree</div>
+                    <div class="table-cell">Year</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">BSCS</div>
+                    <div class="table-cell">2026</div>
+                </div>
+            </div>
+        </section>
+
         <section id="links" class="content-section">
             <h2>Useful Links</h2>
             <ul>
@@ -81,27 +98,24 @@
             </ul>
         </section>
 
-        <section class="content-section">
+        <section id="contact-form" class="content-section clear-floats">
             <h2>Contact Form</h2>
 
-            <form id="contact-form" action="#" method="get">
+            <form action="#" method="get">
 
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name"
-                           placeholder="Enter your name" required>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email"
-                           placeholder="Enter your email" required>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
                 </div>
 
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password"
-                           required>
+                    <input type="password" id="password" name="password" autocomplete="new-password" required>
                 </div>
 
                 <div class="form-group">
@@ -116,15 +130,12 @@
 
                 <fieldset class="form-group">
                     <legend>Gender</legend>
-
                     <label class="choice">
                         <input type="radio" name="gender" value="male">Male
                     </label>
-
                     <label class="choice">
                         <input type="radio" name="gender" value="female">Female
                     </label>
-
                     <label class="choice">
                         <input type="radio" name="gender" value="other">Other
                     </label>
@@ -132,15 +143,12 @@
 
                 <fieldset class="form-group">
                     <legend>Interests</legend>
-
                     <label class="choice">
                         <input type="checkbox" name="interests" value="html">HTML
                     </label>
-
                     <label class="choice">
                         <input type="checkbox" name="interests" value="css">CSS
                     </label>
-
                     <label class="choice">
                         <input type="checkbox" name="interests" value="js"> JavaScript
                     </label>
