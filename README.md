@@ -1,9 +1,9 @@
-# DevTools Layout Verification
+# DevTools Verification Note
 
-I used browser DevTools to inspect the box model and layout behavior of the page:
+I inspected the following elements in the browser DevTools and made adjustments based on the box model and layout findings:
 
-1. **Box Model Panel:** Inspected `.content-box-example` to verify that with `box-sizing: content-box`, the 300px width does not include the 20px padding and 5px border (total computed width is 350px).
-2. **Computed Styles:** Checked `.profile-header` to confirm `position: relative` is active and calculating correctly.
-3. **Element Dimensions:** Verified `.container` max-width of 900px is respected on large screens and scales to 90% on smaller screens.
-4. **Overflow Inspection:** Tested the `.long-text-example` to ensure `text-overflow: ellipsis` truncates the long word properly.
-5. **Positioning:** Verified `.scroll-top-btn` uses `position: fixed` and stays at the bottom-right corner during scrolling.
+1. **Box Model Inspection (`.about-section`):** I verified that the `border-radius` and `box-shadow` were applying correctly. I ensured the absolute `.badge` was positioned using top/right without overflowing the box.
+2. **Overflow Inspection (`.long-text-example`):** I tested the text overflow. The box model showed the content exceeding the width, so I applied `text-overflow: ellipsis` and `overflow: hidden` to truncate it cleanly.
+3. **Float Layout (`.container`):** Inspected the `#skills` and `#education` floats. Ensured the container cleared them properly, preventing the footer from overlapping.
+4. **Table Layout (`table`):** Verified the `border-collapse: collapse` was applied. Checked the `:nth-child(even)` selector to confirm alternating row colors were calculating correctly in the DOM.
+5. **Sticky Nav (`.navigation`):** Inspected the `.navigation` element. Verified that `z-index: 100` keeps it above the scrolling page content and that `scroll-padding-top` prevents the nav from hiding anchor headings.

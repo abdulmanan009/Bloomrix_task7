@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-    
 <body>
 
     <header class="profile-header">
@@ -17,15 +16,17 @@
             I recently completed my BSCS. I have work experience
             in different stacks like MERN, .NET, etc.
         </p>
-        <!-- visibility: hidden requirement -->
-        <p class="hidden-message">This text is hidden using visibility.</p>
+        
+        <!-- Visibility Hidden Demo -->
+        <p class="hidden-message">This text is hidden using visibility, so it takes up space but is invisible.</p>
+        <!-- Display None Demo -->
+        <p class="display-none-message">This text is hidden using display: none, so it takes up NO space.</p>
     </header>
 
     <nav class="navigation">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#education">Education</a>
-        <a href="#table-section">Education Table</a>
         <a href="#links">Useful Links</a>
         <a href="#contact-form">Contact</a>
     </nav>
@@ -40,6 +41,8 @@
                 width="100"
                 height="100"
             >
+            <!-- Z-INDEX DEMO: Absolute Badge over image -->
+            <span class="badge">Status: Available</span>
 
             <h2>About Section</h2>
             <p>
@@ -66,18 +69,44 @@
             </ol>
         </section>
 
-        <!-- New Section to demonstrate display: table and table-cell -->
-        <section id="table-section" class="content-section clear-floats">
+        <!-- SEMANTIC TABLE -->
+        <section class="content-section">
             <h2>Education Table</h2>
-            <div class="table-layout">
-                <div class="table-row">
-                    <div class="table-cell">Degree</div>
-                    <div class="table-cell">Year</div>
-                </div>
-                <div class="table-row">
-                    <div class="table-cell">BSCS</div>
-                    <div class="table-cell">2026</div>
-                </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Degree</th>
+                            <th>Institution</th>
+                            <th>Year</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>BSCS</td>
+                            <td>University</td>
+                            <td>2026</td>
+                        </tr>
+                        <tr>
+                            <td>Intermediate</td>
+                            <td>College</td>
+                            <td>2022</td>
+                        </tr>
+                        <tr>
+                            <td>Matric</td>
+                            <td>School</td>
+                            <td>2020</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- OVERFLOW DEMO -->
+        <section class="content-section">
+            <h2>Overflow & Text Demo</h2>
+            <div class="long-text-example">
+                ThisIsAVeryLongWordThatNeedsToBeBrokenToPreventOverflowingTheContainer
             </div>
         </section>
 
@@ -99,13 +128,14 @@
             </ul>
         </section>
 
-        <section id="contact-form" class="content-section clear-floats">
+        <section id="contact-form" class="content-section">
             <h2>Contact Form</h2>
 
-            <form action="#" method="get">
+            <!-- Changed to POST for security -->
+            <form action="#" method="post">
 
                 <div class="form-group">
-                    <label for="name">Name</label>
+                    <label class="required-label" for="name">Name</label>
                     <input type="text" id="name" name="name" placeholder="Enter your name" required>
                 </div>
 
@@ -163,6 +193,8 @@
                 <div class="form-buttons">
                     <button type="submit">Submit</button>
                     <button type="reset">Reset</button>
+                    <!-- Disabled Button Demo -->
+                    <button type="button" disabled>Disabled Button</button>
                 </div>
 
             </form>
@@ -173,6 +205,9 @@
     <footer class="footer">
         <p>&copy; 2026 Abdul Manan</p>
     </footer>
+
+    <!-- FIXED POSITIONING DEMO -->
+    <a href="#" class="scroll-top-btn">Top</a>
 
 </body>
 </html>
